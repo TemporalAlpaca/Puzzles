@@ -69,15 +69,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Click.cs" />
-    <Compile Include="Assets\GameLogic.cs" />
+    <Compile Include="Assets\Scripts\Click.cs" />
+    <Compile Include="Assets\Scripts\Drag.cs" />
     <Compile Include="Assets\Scripts\Exit.cs" />
+    <Compile Include="Assets\Scripts\GameLogic.cs" />
     <Compile Include="Assets\Scripts\GameOver.cs" />
     <Compile Include="Assets\Scripts\GameScript.cs" />
+    <Compile Include="Assets\Scripts\LightToggle.cs" />
     <Compile Include="Assets\Scripts\LoadLevel.cs" />
     <Compile Include="Assets\Scripts\OnHit.cs" />
     <Compile Include="Assets\Scripts\Prop.cs" />
     <Compile Include="Assets\Scripts\SplashScript.cs" />
+    <Compile Include="Assets\Scripts\inputfield.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
