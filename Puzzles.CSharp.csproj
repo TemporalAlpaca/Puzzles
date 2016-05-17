@@ -69,8 +69,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\CameraScript.cs" />
     <Compile Include="Assets\Scripts\Click.cs" />
     <Compile Include="Assets\Scripts\Drag.cs" />
+    <Compile Include="Assets\Scripts\DrawButton.cs" />
+    <Compile Include="Assets\Scripts\Drawing.cs" />
     <Compile Include="Assets\Scripts\Exit.cs" />
     <Compile Include="Assets\Scripts\GameLogic.cs" />
     <Compile Include="Assets\Scripts\GameOver.cs" />
