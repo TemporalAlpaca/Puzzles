@@ -6,6 +6,8 @@ using System.Collections;
 public class PlayerControl : MonoBehaviour
 {
     //SET SPEED IN THE IDE
+    public int Pickup_Num;
+    public float JumpHeight;
     public float speed;//controls how much force to apply to move the ball
     private int count;//this will count how many cubes have been gathered by player
                       //ATTACH THESE TEXT OBJECTS TO THE SCRIPT
@@ -14,6 +16,7 @@ public class PlayerControl : MonoBehaviour
 
     void Start()
     {
+
         count = 0;//player score starts at 0
         countText.text = "Count: 0";//Display score on GUI at startup
         winText.text = "";//this will become a congratulatory message upon the win condition
@@ -23,6 +26,11 @@ public class PlayerControl : MonoBehaviour
     {
         if (transform.position.y < -1)
             winText.text = "YOU LOSE, PUNK!!!!!!!";
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GetComponent<Rigidbody>().AddForce(new Vector3(0, JumpHeight, 0));
+
+        }
     }
 
     void FixedUpdate()
@@ -58,7 +66,7 @@ public class PlayerControl : MonoBehaviour
             countText.text = "Count: " + count.ToString();
         }
         //if all the pickup objects have been gathered
-        if (count > 3)
+        if (count > Pickup_Num - 1)
         {
             //congrats to the player
             winText.text = "You win!!!!!!!";
